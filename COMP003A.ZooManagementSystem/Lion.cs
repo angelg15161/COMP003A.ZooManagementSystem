@@ -3,9 +3,9 @@ namespace COMP003A.ZooManagementSystem;
 /// <summary>
 /// Lion derived (child) class which is a type of Animal. 
 /// </summary>
-public class Lion : Animal 
+internal class Lion : Animal 
 {
-    // Override MakeSound() 
+    // Override MakeSound() from the animal abstract class
     public override void MakeSound()
     {
         Console.Write("The lion roars! ");

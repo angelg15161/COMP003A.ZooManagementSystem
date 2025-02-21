@@ -13,20 +13,20 @@ class Program
         // Welcome 
         Console.WriteLine("Welcome to the Zoo Management System! ");
         
-        // List that stores added zoo animals 
+        // List that stores the added zoo animals 
         List<Animal> animals = new List<Animal>();
         
         // zooUtility class used to describe an animal 
         ZooUtility zooUtility = new ZooUtility();
         
-        // Variable for loop condition. 
+        // Variable for the loop condition 
         bool exit = true;
 
-        // Looped menu, ends only when user selects exit. 
+        // Looped menu, ends only when the user selects exit, aka option 5. 
         while (exit)
         {
             Console.WriteLine("\nSelect an option (1-5): ");
-            Console.WriteLine("1. Add a Lion \n2. Add a Parrot \n3. Display all animals \n4. Describe an animal \n5. Exit");
+            Console.WriteLine("1. Add a Lion \n2. Add a Parrot \n3. Display all animals \n4. Describe the animals \n5. Exit");
             Console.Write("Your choice: ");
 
             // Try-Catch for incorrect user input (so application doesn't end unexpectedly). 
@@ -42,8 +42,9 @@ class Program
                     string lionName = Console.ReadLine();
                     Console.Write("Enter the species of the lion: ");
                     string lionSpecies = Console.ReadLine();
+                    int lionAge = 6; // Preset lion age to show I understand method overloading. 
                     
-                    Lion lion = new Lion { Name = lionName, Species = lionSpecies };
+                    Lion lion = new Lion { Name = lionName, Species = lionSpecies, Age = lionAge };
                     animals.Add(lion);
                     Console.WriteLine("Lion added successfully! ");
                 }
@@ -52,10 +53,11 @@ class Program
                 {
                     Console.Write("\nEnter the name of the parrot: ");
                     string parrotName = Console.ReadLine();
-                    Console.Write("Enter the species of the lion: ");
+                    Console.Write("Enter the species of the parrot: ");
                     string parrotSpecies = Console.ReadLine();
+                    int parrotAge = 3; // preset parrot age to show I understand method overloading.
                     
-                    Parrot parrot = new Parrot { Name = parrotName, Species = parrotSpecies };
+                    Parrot parrot = new Parrot { Name = parrotName, Species = parrotSpecies, Age = parrotAge };
                     animals.Add(parrot);
                     Console.WriteLine("Parrot added successfully! ");
                 }
@@ -74,7 +76,7 @@ class Program
                 // Describe an animal 
                 else if (choice == 4)
                 {
-                    Console.WriteLine("Select an option: ");
+                    Console.WriteLine("\nSelect an option: ");
                     Console.WriteLine("1. Describe by name only");
                     Console.WriteLine("2. Describe by name and species");
                     Console.WriteLine("3. Describe by name, species, and age");

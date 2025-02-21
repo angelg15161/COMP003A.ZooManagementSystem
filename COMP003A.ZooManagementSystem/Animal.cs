@@ -3,11 +3,12 @@ namespace COMP003A.ZooManagementSystem;
 /// <summary>
 /// Abstract base (parent) animal class. 
 /// </summary>
-public abstract class Animal
+internal abstract class Animal
 {
     // fields (private)
     private string _name;
     private string _species;
+    private int _age;
 
     // Properties (public) with implementation and validation.
     public string Name
@@ -24,6 +25,9 @@ public abstract class Animal
         }
     }
 
+    // Don't need validation because the age is predetermined 
+    public int Age { get; set; }
+    
     public string Species
     {
         get { return _species; }
