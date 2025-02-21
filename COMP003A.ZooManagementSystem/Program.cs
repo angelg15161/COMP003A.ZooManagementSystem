@@ -83,6 +83,7 @@ class Program
                     Console.Write("Choice: ");
                     
                     string describeChoice = Console.ReadLine(); // string to avoid using another try catch 
+                    Console.WriteLine("");
                     
                     // if else statements for description choice 1-3 
                     if (describeChoice == "1") // Display animal names only 
